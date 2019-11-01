@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" href="../css/site.css">
+</head>
+
+<body>
+<div>
+<aside>
+    <div class="center">
+        <img class="logo" src="/img/logo.png" alt="logo">
+    </div>
+    {{> navigation}}
+</aside>
+{{> header}}
+    {{#if message}}
+        <section id="notifications">
+            <p>{{message}}</p>
+        </section>
+    {{/if}}
+    <main>
+        {{{ body }}}
+    </main>
+    {{> footer}}
+</div>
+</body>
+
+</html>
